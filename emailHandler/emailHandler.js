@@ -69,9 +69,9 @@ function getHeader(headers, name) {
     return header ? header.value : null;
 }
 async function replyToEmail(gmail, originalEmail) {
-    const emailSubject = `Re: ${getHeader(originalEmail.data.payload.headers, 'Subject')}`;
+    const emailSubject = 'Out of Town';
     const emailTo = getHeader(originalEmail.data.payload.headers, 'From');
-    const emailBody = 'This is a reply to your email.'; 
+    const emailBody = 'Thank you for your email. I am currently on vacation and will have limited access to email. I will get back to you as soon as possible upon my return.'; 
 
     const message = [
         'Content-Type: text/plain; charset="UTF-8"\n',
